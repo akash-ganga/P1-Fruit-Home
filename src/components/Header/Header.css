@@ -2,7 +2,7 @@
     background-color: rgb(214, 201, 22);
 }
 
-.header-1 a{
+.head1-a{
     text-decoration: none;
     color: black;
     font-weight: 500;
@@ -12,7 +12,7 @@
     background-color: rgb(223, 61, 61);
 }
 
-.header-2 a{
+.head2-a{
     text-decoration: none;
     color: white;
     font-size: larger;
@@ -21,13 +21,14 @@
     padding: 20px 20px;
 }
 
-.header-2 a:hover{
+.head2-a:hover{
     color: black;
     background-color:chartreuse
 }
 
 .header-2 img{
     height: 100px;
+    margin-left: 50px;
 }
 
 .header-1, .header-2{

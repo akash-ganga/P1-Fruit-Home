@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/LOGO.jpg';
+import logo from '../../images/LOGO.png';
 import './Header.css';
 
 const Header = () => {
@@ -7,25 +7,25 @@ const Header = () => {
         <nav>
             <div className='header-1'>
                 <div>
-                    <a href='/shop'>Shop</a>
-                    <a href='/media'>media</a>
-                    <a href='/tree'>Gash</a>
-                    <a href='/lesson'>Looslon</a>
+                    <a className='head1-a' href='/shop'>Shop</a>
+                    <a className='head1-a' href='/media'>media</a>
+                    <a className='head1-a' href='/tree'>Gash</a>
+                    <a className='head1-a' href='/lesson'>Looslon</a>
                 </div>
                 <div>
-                    <a href='/shop'>Shop</a>
-                    <a href='/media'>media</a>
-                    <a href='/tree'>Gash</a>
-                    <a href='/lesson'>Looslon</a>
+                    <a className='head1-a' href='/shop'>Shop</a>
+                    <a className='head1-a' href='/media'>media</a>
+                    <a className='head1-a' href='/tree'>Gash</a>
+                    <a className='head1-a' href='/lesson'>Looslon</a>
                 </div>
             </div>
             <div className='header-2'>
-                <img src={logo} alt="this is logo" />
+                <a href='/home'><img src={logo} alt="this is logo" /></a>
                 <div>
-                    <a href='/shop'>Shop</a>
-                    <a href='/media'>media</a>
-                    <a href='/tree'>Gash</a>
-                    <a href='/lesson'>Looslon</a>
+                    <a className='head2-a' href='/shop'>Shop</a>
+                    <a className='head2-a' href='/media'>media</a>
+                    <a className='head2-a' href='/tree'>Gash</a>
+                    <a className='head2-a' href='/lesson'>Looslon</a>
                 </div>
             </div>
         </nav>
