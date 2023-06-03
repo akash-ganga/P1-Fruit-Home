@@ -1,4 +1,5 @@
 import './App.css';
+import Fruits from './components/Fruits/Fruits';
 import Header from './components/Header/Header';
 import Sec1 from './components/Sec1/Sec1';
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Header></Header>
       <Sec1></Sec1>
+      <Fruits></Fruits>
     </div>
   );
 }

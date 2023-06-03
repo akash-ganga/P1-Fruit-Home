@@ -1,0 +1,27 @@
+.single-fruit{
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    display: flex;
+}
+
+.single-fruit img{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.fruit-button{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 221, 110);
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.fruit-button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 196, 0);;
+}

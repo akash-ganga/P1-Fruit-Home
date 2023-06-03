@@ -1,5 +1,5 @@
 import React from 'react';
-import first from '../../images/frist1.png';
+import first from '../../images/first1.jpg';
 import './Sec1.css';
 
 const Sec1 = () => {
