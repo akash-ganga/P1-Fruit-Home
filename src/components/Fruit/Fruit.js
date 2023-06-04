@@ -1,12 +1,12 @@
 import React from 'react';
 import './Fruit.css';
 
-const Fruit = ({ fruit }) => {
-    const { name, img, price, stock, shipping } = fruit;
+const Fruit = ({ fruit, addToBasket }) => {
+    const { id, name, img, price, stock, shipping } = fruit;
 
     return (
-        <div>
-            <div className='single-fruit'>
+        <div className='single-fruit'>
+            <div className='fruit-info'>
                 <img src={img} alt="a fruit" />
                 <div>
                     <h4>Name: {name}</h4>
@@ -15,7 +15,7 @@ const Fruit = ({ fruit }) => {
                     <p>Shipping: {shipping}</p>
                 </div>
             </div>
-            <button className='fruit-button'>ksdjklsd</button>
+            <button onClick={()=>addToBasket(id)} className='fruit-button'>Add to your Basket</button>
         </div>
     );
 };

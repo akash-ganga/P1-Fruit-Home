@@ -1,27 +1,33 @@
 .single-fruit{
     background-color: white;
     border: 1px solid red;
-    border-radius: 5px;
+    border-radius: 15px;
+}
+
+.fruit-info{
     display: flex;
 }
 
-.single-fruit img{
+.fruit-info img{
     width: 200px;
     height: 200px;
     border-radius: 15px;
     padding: 5px;
+    margin-right: 20px;
 }
 
 .fruit-button{
     width: 100%;
     height: 50px;
-    background-color: rgb(255, 221, 110);
+    background-color: rgb(255, 230, 150);
     text-align: center;
     font-size: larger;
     font-weight: 600;
+    border: 0;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .fruit-button:hover{
     cursor: pointer;
-    background-color: rgb(255, 196, 0);;
+    background-color: orange;
 }

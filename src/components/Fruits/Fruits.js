@@ -5,11 +5,18 @@ import Basket from '../Basket/Basket';
 
 const Fruits = () => {
     const [fruits, setFruits] = useState([]);
+    const [basket, setBasket] = useState([]);
+
     useEffect(() => {
         fetch('fruits.json')
             .then(res => res.json())
             .then(data => setFruits(data));
     }, [])
+
+    const addToBasket = (fruit) =>{
+        setBasket([...basket, fruit]);
+        console.log(basket);
+    }
 
     return (
         <div className='fruits-sec'>
@@ -20,11 +27,12 @@ const Fruits = () => {
                         fruits.map(fruit => <Fruit
                             key={fruit.id}
                             fruit={fruit}
+                            addToBasket={addToBasket}
                         ></Fruit>)
                     }
                 </div>
             </div>
-            <Basket></Basket>
+            <Basket basket={basket}></Basket>
         </div>
     );
 };
