@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../images/LOGO.png';
 import './Header.css';
 
@@ -7,25 +9,26 @@ const Header = () => {
         <nav>
             <div className='header-1'>
                 <div>
-                    <a className='head1-a' href='/shop'>Shop</a>
-                    <a className='head1-a' href='/media'>media</a>
-                    <a className='head1-a' href='/tree'>Gash</a>
-                    <a className='head1-a' href='/lesson'>Looslon</a>
+                    <a href='/shop'>ABOUT</a>
+                    <a href='/media'>SERVICES</a>
+                    <a href='/tree'>CONTRACT</a>
+                    <a href='/lesson'>BEYOND</a>
                 </div>
                 <div>
-                    <a className='head1-a' href='/shop'>Shop</a>
-                    <a className='head1-a' href='/media'>media</a>
-                    <a className='head1-a' href='/tree'>Gash</a>
-                    <a className='head1-a' href='/lesson'>Looslon</a>
+                    <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
+                    <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
+                    <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
+                    <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
+                    <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
                 </div>
             </div>
             <div className='header-2'>
-                <a href='/home'><img src={logo} alt="this is logo" /></a>
+                <a className='logo-link' href='/home'><img src={logo} alt="this is logo" /></a>
                 <div>
-                    <a className='head2-a' href='/shop'>Shop</a>
-                    <a className='head2-a' href='/media'>media</a>
-                    <a className='head2-a' href='/tree'>Gash</a>
-                    <a className='head2-a' href='/lesson'>Looslon</a>
+                    <a href='/shop'>Shop</a>
+                    <a href='/media'>media</a>
+                    <a href='/tree'>Gash</a>
+                    <a href='/lesson'>Looslon</a>
                 </div>
             </div>
         </nav>

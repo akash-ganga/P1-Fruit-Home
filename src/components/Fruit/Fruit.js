@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 import './Fruit.css';
 
 const Fruit = ({ fruit, addToBasket }) => {
@@ -15,7 +17,7 @@ const Fruit = ({ fruit, addToBasket }) => {
                     <p>Shipping: {shipping}</p>
                 </div>
             </div>
-            <button onClick={()=>addToBasket(id)} className='fruit-button'>Add to your Basket</button>
+            <button className='fruit-button' onClick={()=>addToBasket(id)}><p>Add to your Basket</p><FontAwesomeIcon className='but-icon' icon={faBasketShopping}></FontAwesomeIcon></button>
         </div>
     );
 };
