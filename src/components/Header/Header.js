@@ -19,7 +19,7 @@ const Header = () => {
                     <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
                     <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
                     <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
-                    <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
+                    <a className='sp-lin-mar' href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
                 </div>
             </div>
             <div className='header-2'>

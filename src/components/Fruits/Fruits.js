@@ -13,9 +13,18 @@ const Fruits = () => {
             .then(data => setFruits(data));
     }, [])
 
-    const addToBasket = (fruit) =>{
-        setBasket([...basket, fruit]);
-        console.log(basket);
+    const addToBasket = (name, img, quantity, id) =>{
+        if(basket.length !== 0){
+            for(const fruit of basket){
+                if(fruit.id === id){
+                    fruit.quantity+=1;
+                    setBasket([...basket]);
+                    break;
+                }
+                else setBasket([...basket, {name: name, img: img, quantity: quantity, id: id}]);
+            }
+        }
+        else setBasket([{name: name, img: img, quantity: quantity, id: id}]);
     }
 
     return (

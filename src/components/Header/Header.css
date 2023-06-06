@@ -1,6 +1,6 @@
 .header-1{
     background-color: rgb(214, 201, 22);
-    padding: 10px 80px;
+    padding: 10px 85px;
 }
 
 .header-1 a{
@@ -8,6 +8,10 @@
     color: black;
     font-weight: 500;
     margin-right: 30px;
+}
+
+.header-1 .sp-lin-mar{
+    margin-right: 0;
 }
 
 .header-2{
