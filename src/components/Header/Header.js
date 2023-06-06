@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faFaceAngry, faGaugeHigh, faKey, faLadderWater } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../images/LOGO.png';
 import './Header.css';
 
@@ -16,10 +16,10 @@ const Header = () => {
                 </div>
                 <div>
                     <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
-                    <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
-                    <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
-                    <a href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
-                    <a className='sp-lin-mar' href='/shop'><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></a>
+                    <a href='/shop'><FontAwesomeIcon icon={faFaceAngry}></FontAwesomeIcon></a>
+                    <a href='/shop'><FontAwesomeIcon icon={faGaugeHigh}></FontAwesomeIcon></a>
+                    <a href='/shop'><FontAwesomeIcon icon={faKey}></FontAwesomeIcon></a>
+                    <a className='sp-lin-mar' href='/shop'><FontAwesomeIcon icon={faLadderWater}></FontAwesomeIcon></a>
                 </div>
             </div>
             <div className='header-2'>
