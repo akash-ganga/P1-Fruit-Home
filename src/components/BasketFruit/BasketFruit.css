@@ -6,7 +6,7 @@
     justify-content: space-around;
     margin: 10px 10px 0 10px;
     border-radius: 15px;
-    /* position: relative; */
+    position: relative;
 }
 
 .b-f-img{
@@ -18,13 +18,13 @@
     display: none;
 }
 
-.b-f-img:hover .fruit-name{
+/* .b-f-img:hover + .fruit-name{
     display: block;
     padding: 23px;
-    position: relative;
+    position: absolute;
     left: 100px;
     top: -30px;
-}
+} */
 
 .fruit-quan{
     background-color: rgba(236, 239, 241, 1);

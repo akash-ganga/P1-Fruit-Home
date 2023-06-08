@@ -1,11 +1,33 @@
 .basket{
+    height: fit-content;
+    position: sticky;
+    top: 0;
+}
+
+.basket-fruits, .price{
     background-color: rgb(184, 144, 144);
 }
 
-.basket-title{
+.basket-fruits{
+    padding-bottom: 10px;
+    border-radius: 0px 0px 10px 10px;
+    height: 490px;
+    overflow-y: auto;
+}
+
+.basket-title, .price-title{
     color: white;
     background-color: rgb(44, 141, 24);
     text-align: center;
     margin: 0;
     padding: 3px 0px;
+}
+
+.price{
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 15px;
+}
+
+.price-details{
+    padding: 10px;
 }

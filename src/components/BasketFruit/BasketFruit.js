@@ -2,7 +2,8 @@ import React from 'react';
 import './BasketFruit.css';
 
 const BasketFruit = ({ fruit }) => {
-    const { name, img, quantity, id } = fruit;
+    const { name, img, quantity } = fruit;
+    // , id
     return (
         <div className='single-basket-fruit'>
             <p className='fruit-name'>{name}</p>

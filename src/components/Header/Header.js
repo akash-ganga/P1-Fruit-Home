@@ -11,7 +11,7 @@ const Header = () => {
                 <div>
                     <a href='/shop'>ABOUT</a>
                     <a href='/media'>SERVICES</a>
-                    <a href='/tree'>CONTRACT</a>
+                    <a href='/tree'>CONTACT</a>
                     <a href='/lesson'>BEYOND</a>
                 </div>
                 <div>
