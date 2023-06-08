@@ -1,6 +1,10 @@
 .fruits-sec{
     display: grid;
     grid-template-columns: 3fr 1fr;
+    /* position: sticky; */
+    /* top: 146.65px; */
+    /* top: 2000px; */
+    /* top: 10px; */
 }
 
 .fruits-container{
@@ -13,6 +17,8 @@
 }
 
 .fruit-sec-title{
+    position: sticky;
+    top: 0;
     color: white;
     background-color: rgb(106, 72, 201);
     text-align: center;
