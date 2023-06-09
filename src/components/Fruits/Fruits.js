@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Fruits.css';
 import Fruit from '../Fruit/Fruit';
 import Basket from '../Basket/Basket';
+import { addFruitToSto } from '../../utilities/sto_to_ls';
 
 const Fruits = () => {
     const [fruits, setFruits] = useState([]);
@@ -32,6 +33,8 @@ const Fruits = () => {
             b_fruit.quantity = 1;
             setBasket([b_fruit]);
         }
+
+        addFruitToSto(b_fruit.id);
     }
     
     // const addToBasket = (b_fruit) =>{
