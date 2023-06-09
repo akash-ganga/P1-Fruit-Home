@@ -1,4 +1,4 @@
-const addFruitToSto = id =>{
+const addFruitToLocalStorage = id =>{
     let basketFruits;
 
     // const bf = localStorage.getItem('basket-fruits');
@@ -14,7 +14,23 @@ const addFruitToSto = id =>{
     localStorage.setItem('basket-fruits', JSON.stringify(basketFruits));
 }
 
-export {
-    addFruitToSto
+const removeFromLS = id =>{
+    const bf = localStorage.getItem('basket-fruits');
+    if(bf){
+        const bfo = JSON.parse(bf);
+        if(id in bfo){
+            delete bfo[id];
+            localStorage.setItem('basket-fruits', JSON.stringify(bfo));
+        }
+    }
+}
 
+const deleteLS = () =>{
+    localStorage.removeItem('basket-fruits');
+}
+
+export {
+    addFruitToLocalStorage,
+    removeFromLS,
+    deleteLS
 }
