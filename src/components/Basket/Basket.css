@@ -11,7 +11,8 @@
 .basket-fruits{
     padding-bottom: 10px;
     border-radius: 0px 0px 10px 10px;
-    height: 490px;
+    border-bottom: 2px red solid;
+    height: 332px;
     overflow-y: auto;
     z-index: -1;
 }
@@ -32,6 +33,7 @@
 
 .price{
     border-radius: 0px 0px 10px 10px;
+    border-bottom: 2px red solid;
     margin-top: 15px;
 }
 

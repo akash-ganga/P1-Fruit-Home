@@ -13,19 +13,47 @@ const Fruits = () => {
             .then(data => setFruits(data));
     }, [])
 
-    const addToBasket = (name, img, quantity, id) =>{
+    const addToBasket = (b_fruit) =>{
+        let d = 0;
         if(basket.length !== 0){
-            for(const fruit of basket){
-                if(fruit.id === id){
+            for(const fruit of basket)
+                if(fruit.id === b_fruit.id){
                     fruit.quantity+=1;
                     setBasket([...basket]);
+                    d=1;
                     break;
                 }
-                else setBasket([...basket, {name: name, img: img, quantity: quantity, id: id}]);
-            }
+            if(d === 0){
+                b_fruit.quantity = 1;
+                setBasket([...basket, b_fruit]);
+            }    
         }
-        else setBasket([{name: name, img: img, quantity: quantity, id: id}]);
+        else{
+            b_fruit.quantity = 1;
+            setBasket([b_fruit]);
+        }
     }
+    
+    // const addToBasket = (b_fruit) =>{
+    //     // How this function is working without adding same extra fruit in basket?
+    //     if(basket.length !== 0){
+    //         for(const fruit of basket){
+    //             if(fruit.id === b_fruit.id){
+    //                 fruit.quantity+=1;
+    //                 setBasket([...basket]);
+    //                 break;
+    //             }
+    //             else{
+    //                 // b_fruit.quantity = 1;
+    //                 setBasket([...basket, b_fruit]);
+    //             }    
+    //         }
+    //     }
+    //     else{
+    //         b_fruit.quantity = 1;
+    //         setBasket([b_fruit]);
+    //     }
+    // }
 
     return (
         <div className='fruits-sec'>

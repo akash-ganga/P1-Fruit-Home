@@ -17,7 +17,7 @@ const Fruit = ({ fruit, addToBasket }) => {
                     <p>Shipping: {shipping}</p>
                 </div>
             </div>
-            <button className='fruit-button' onClick={()=>addToBasket(name, img, quantity, id)}><p>Add to your Basket</p><FontAwesomeIcon className='but-icon' icon={faBasketShopping}></FontAwesomeIcon></button>
+            <button className='fruit-button' onClick={()=>addToBasket(fruit)}><p>Add to your Basket</p><FontAwesomeIcon className='but-icon' icon={faBasketShopping}></FontAwesomeIcon></button>
         </div>
     );
 };
