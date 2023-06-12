@@ -23,6 +23,12 @@
     z-index: 1;
 }
 
+.clear-bas-but{
+    position: relative;
+    top: -6px;
+    left: 12px;
+}
+
 .basket-title, .price-title{
     color: white;
     background-color: rgb(44, 141, 24);
@@ -39,4 +45,10 @@
 
 .price-details{
     padding: 10px;
+}
+
+.price-details p{
+    margin: 7px 0 0 0;
+    font-size: large;
+    font-weight: 500;
 }

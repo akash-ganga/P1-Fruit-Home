@@ -29,8 +29,15 @@ const deleteLS = () =>{
     localStorage.removeItem('basket-fruits');
 }
 
+const getStoredBasket = () =>{
+    let basketFruits = {};
+    if(localStorage.getItem('basket-fruits')) return JSON.parse(localStorage.getItem('basket-fruits'));
+    return basketFruits;
+}
+
 export {
     addFruitToLocalStorage,
     removeFromLS,
-    deleteLS
+    deleteLS,
+    getStoredBasket
 }

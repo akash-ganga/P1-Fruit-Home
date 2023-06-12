@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Fruits.css';
 import Fruit from '../Fruit/Fruit';
 import Basket from '../Basket/Basket';
-import { addFruitToLocalStorage } from '../../utilities/sto_to_ls';
+import { addFruitToLocalStorage, deleteLS, getStoredBasket } from '../../utilities/sto_to_ls';
 
 const Fruits = () => {
     const [fruits, setFruits] = useState([]);
@@ -13,6 +13,19 @@ const Fruits = () => {
             .then(res => res.json())
             .then(data => setFruits(data));
     }, [])
+
+    useEffect(() =>{
+        const storedBasket = getStoredBasket();
+        const fruitFromLS = [];
+        for(const id in storedBasket){
+            const fruitStorage = fruits.find(fruit => fruit.id === id);
+            if(fruitStorage){
+                fruitStorage.quantity = storedBasket[id];
+                fruitFromLS.push(fruitStorage);
+            }
+        }
+        setBasket(fruitFromLS);
+    }, [fruits])
 
     const addToBasket = (b_fruit) =>{
         let d = 0;
@@ -35,6 +48,11 @@ const Fruits = () => {
         }
 
         addFruitToLocalStorage(b_fruit.id);
+    }
+
+    const clearBasket = () =>{
+        setBasket([]);
+        deleteLS();
     }
     
     // const addToBasket = (b_fruit) =>{
@@ -72,7 +90,10 @@ const Fruits = () => {
                     }
                 </div>
             </div>
-            <Basket basket={basket}></Basket>
+            <Basket
+            basket={basket}
+            clearBasket = {clearBasket}
+            ></Basket>
         </div>
     );
 };

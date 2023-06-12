@@ -12,6 +12,7 @@ const BasketFruit = ({ fruit }) => {
             <p>{quantity}</p>
             <button>+</button>
             <button>-</button>
+            <button>delete</button>
         </div>
     );
 };

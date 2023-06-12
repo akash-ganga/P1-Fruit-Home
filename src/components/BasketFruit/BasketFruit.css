@@ -1,6 +1,6 @@
 .single-basket-fruit{
     background-color: white;
-    padding: 5px;
+    padding: 0px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -12,6 +12,7 @@
 .b-f-img{
     height: 50px;
     width: 50px;
+    border-radius: 25px;
 }
 
 .fruit-name{
