@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Fruits.css';
 import Fruit from '../Fruit/Fruit';
 import Basket from '../Basket/Basket';
-import { addFruitToLocalStorage, deleteLS, getStoredBasket, removeFromLS } from '../../utilities/sto_to_ls';
+import { addFruitToLocalStorage, deleteLS, getStoredBasket, removeFromLS, removeFruitFromLocalStorage } from '../../utilities/sto_to_ls';
 
 const Fruits = () => {
     const [fruits, setFruits] = useState([]);
@@ -60,6 +60,7 @@ const Fruits = () => {
             if (fruit.id === id) {
                 fruit.quantity += 1;
                 setBasket([...basket]);
+                addFruitToLocalStorage(id);
                 break;
             }
     }
@@ -74,6 +75,7 @@ const Fruits = () => {
                 else{
                     fruit.quantity -= 1;
                     setBasket([...basket]);
+                    removeFruitFromLocalStorage(id)
                     break;
                 }
             }
