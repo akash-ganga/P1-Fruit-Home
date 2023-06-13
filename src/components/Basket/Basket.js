@@ -2,7 +2,7 @@ import React from 'react';
 import './Basket.css';
 import BasketFruit from '../BasketFruit/BasketFruit';
 
-const Basket = ({ basket, clearBasket }) => {
+const Basket = ({ basket, clearBasket, increaseFruit, decreaseFruit, deleteFruitFromBasket }) => {
     let price = 0;
     let shipping = 0;
     let quan = 0;
@@ -24,6 +24,9 @@ const Basket = ({ basket, clearBasket }) => {
                     basket.map(fruit => <BasketFruit
                         key={fruit.id}
                         fruit={fruit}
+                        increaseFruit = {increaseFruit}
+                        decreaseFruit = {decreaseFruit}
+                        deleteFruitFromBasket = {deleteFruitFromBasket}
                     ></BasketFruit>)
                 }
             </div>
