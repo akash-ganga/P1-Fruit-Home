@@ -24,9 +24,9 @@ const Header = () => {
                 </div>
             </div>
             <div className='header-2'>
-                <Link className='logo-link' to='/home'><img src={logo} alt="this is logo" /></Link>
+                <Link className='logo-link' to='/'><img src={logo} alt="this is logo" /></Link>
                 <div>
-                    <Link to='/basket'>Basket</Link>
+                    <Link to='/basket-detail'>Basket</Link>
                     <Link to='/fruit-detail'>Fruit-Detail</Link>
                     <Link to='/register'>Register</Link>
                     <Link to='/login'>Login</Link>

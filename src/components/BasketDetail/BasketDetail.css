@@ -1,0 +1,54 @@
+.bas-detail{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bas-d-fruit, .bas-fruit-detail{
+    display: flex;
+    align-items: center;
+}
+
+.bas-d-fruit{
+    justify-content: space-between;
+    border: 5px solid rgb(189, 189, 189);
+    border-radius: 20px;
+    margin: 10px 0;
+    padding-right: 30px;
+}
+
+.bas-fruit-detail{
+    justify-content: start;
+    padding-right: 100px;
+}
+
+.bas-fruit-detail img{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.bas-fruit-detail p{
+    font-size: large;
+    font-weight: 500;
+}
+
+.del-but{
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(255, 152, 152);
+}
+
+.del-but:hover{
+    cursor: pointer;
+    background-color: brown;
+}
+
+.del-icon{
+    color: rgb(255, 68, 68);
+    font-size: 80px;
+}
