@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import './BasketDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { removeFromLS } from '../../utilities/sto_to_ls';
 
 const BasketDetail = () => {
     const { fruits, currentFruits } = useLoaderData();
@@ -20,6 +21,12 @@ const BasketDetail = () => {
 
     const tax = parseFloat((price * .1).toFixed(2));
 
+    const removeFruit = id =>{
+        const remaining = basFruit.filter(fruit => fruit.id !== id);
+        setBasFruit(remaining);
+        removeFromLS(id);
+    }
+
     return (
         <div className='bas-detail'>
             <div>
@@ -32,9 +39,10 @@ const BasketDetail = () => {
                                     <h3>{fruit.name}</h3>
                                     <p>Price: ${fruit.price}</p>
                                     <p>Shipping Charge: ${fruit.shipping}</p>
+                                    <p>Quantity: {fruit.quantity}</p>
                                 </div>
                             </div>
-                            <button className='del-but'><FontAwesomeIcon className='del-icon' icon={faTrashAlt}></FontAwesomeIcon></button>
+                            <button className='del-but' onClick={()=>removeFruit(fruit.id)}><FontAwesomeIcon className='del-icon' icon={faTrashAlt}></FontAwesomeIcon></button>
                         </div>
                     )
                 }
