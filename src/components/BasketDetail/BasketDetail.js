@@ -8,6 +8,18 @@ const BasketDetail = () => {
     const { fruits, currentFruits } = useLoaderData();
     const [basFruit, setBasFruit] = useState(currentFruits);
 
+    let price = 0;
+    let shipping = 0;
+    let quan = 0;
+    
+    for(const fruit of basFruit){
+        price = price + fruit.price * fruit.quantity;
+        shipping = shipping + fruit.shipping * fruit.quantity;
+        quan = quan + fruit.quantity;
+    }
+
+    const tax = parseFloat((price * .1).toFixed(2));
+
     return (
         <div className='bas-detail'>
             <div>
@@ -18,8 +30,8 @@ const BasketDetail = () => {
                                 <img src={fruit.img} alt="fruit" />
                                 <div>
                                     <h3>{fruit.name}</h3>
-                                    <p>Price: {fruit.price}</p>
-                                    <p>Shipping Charge: {fruit.shipping}</p>
+                                    <p>Price: ${fruit.price}</p>
+                                    <p>Shipping Charge: ${fruit.shipping}</p>
                                 </div>
                             </div>
                             <button className='del-but'><FontAwesomeIcon className='del-icon' icon={faTrashAlt}></FontAwesomeIcon></button>
@@ -27,13 +39,15 @@ const BasketDetail = () => {
                     )
                 }
             </div>
-            <div className='price'>
-                <h1 className='price-title'>Price</h1>
-                <div className='price-details'>
+            <div className='detail-price'>
+                <h1 className='detail-price-title'>Price</h1>
+                <div className='detail-price-details'>
                     <p>Selected Fruits: {basFruit.length}</p>
-                    <p>Total Number of Fruits: {basFruit.length}</p>
-                    <p>Total Price: ${basFruit.length}</p>
-                    <p>Total Shipping: ${basFruit.length}</p>
+                    <p>Total Number of Fruits: {quan}</p>
+                    <p>Total Price: ${price}</p>
+                    <p>Total Shipping: ${shipping}</p>
+                    <p>Tax: ${tax}</p>
+                    <h4>Grand Total: ${(price + shipping + tax).toFixed(2)}</h4>
                 </div>
             </div>
         </div>
