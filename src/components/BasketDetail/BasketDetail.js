@@ -13,6 +13,8 @@ const BasketDetail = () => {
     let shipping = 0;
     let quan = 0;
     
+    const n = basFruit.length;
+
     for(const fruit of basFruit){
         price = price + fruit.price * fruit.quantity;
         shipping = shipping + fruit.shipping * fruit.quantity;
@@ -30,6 +32,7 @@ const BasketDetail = () => {
     return (
         <div className='bas-detail'>
             <div>
+            {!n && <div className='det-empty-txt'><p>Empty</p></div>}
                 {
                     basFruit.map(fruit =>
                         <div key={fruit.id} className='bas-d-fruit'>

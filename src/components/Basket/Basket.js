@@ -6,8 +6,10 @@ const Basket = ({ basket, clearBasket, increaseFruit, decreaseFruit, deleteFruit
     let price = 0;
     let shipping = 0;
     let quan = 0;
-    
-    for(const fruit of basket){
+
+    const n = basket.length;
+
+    for (const fruit of basket) {
         price = price + fruit.price * fruit.quantity;
         shipping = shipping + fruit.shipping * fruit.quantity;
         quan = quan + fruit.quantity;
@@ -15,19 +17,22 @@ const Basket = ({ basket, clearBasket, increaseFruit, decreaseFruit, deleteFruit
 
     const tax = parseFloat((price * .1).toFixed(2));
     // console.log(basket);
-    
+
     return (
         <div className='basket'>
             <h1 className='basket-title'>Your Basket <button className='clear-bas-but' onClick={clearBasket}>clear basket</button></h1>
             <div className='basket-fruits'>
                 {
+                    n ?
                     basket.map(fruit => <BasketFruit
                         key={fruit.id}
                         fruit={fruit}
-                        increaseFruit = {increaseFruit}
-                        decreaseFruit = {decreaseFruit}
-                        deleteFruitFromBasket = {deleteFruitFromBasket}
+                        increaseFruit={increaseFruit}
+                        decreaseFruit={decreaseFruit}
+                        deleteFruitFromBasket={deleteFruitFromBasket}
                     ></BasketFruit>)
+                    :
+                    <div className='empty-txt'><p>Empty</p></div>
                 }
             </div>
             <div className='price'>
