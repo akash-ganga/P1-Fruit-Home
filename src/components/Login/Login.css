@@ -61,3 +61,7 @@ form{
     font-weight: 600;
     text-align: center;
 }
+
+.txt-err{
+    color: rgb(199, 42, 42);
+}
