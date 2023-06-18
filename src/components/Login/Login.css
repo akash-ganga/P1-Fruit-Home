@@ -1,0 +1,63 @@
+.form-container{
+    background-color: rgb(228, 236, 153);
+    height: 600px;
+}
+
+.login-title{
+    margin: 0;
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+form{
+    background-color: rgb(248, 128, 47);
+    border-radius: 20px;
+    padding: 40px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.form-control{
+    padding-bottom: 15px;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.form-control label{
+    display: block;
+    width: 100%;
+    font-weight: 700;
+}
+
+.form-control input{
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: larger;
+    font-weight: 700;
+    width: 100%;
+    margin-right: 100px;
+}
+
+.submit-but{
+    text-align: center;
+    width: 50%;
+    margin: 20px 0px 0px 140px;
+    height: 50px;
+    font-size: larger;
+    font-weight: 700;
+    border: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 255, 221, 0.692);
+}
+
+.submit-but:hover{
+    color: white;
+    background-color: rgba(0, 65, 56, 0.692);
+    cursor: pointer;
+}
+
+.log-bottom-txt{
+    font-weight: 600;
+    text-align: center;
+}
