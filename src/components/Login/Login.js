@@ -2,33 +2,29 @@ import React, { useContext, useState } from 'react';
 import './Login.css';
 import app from '../../firebase/firebase.init';
 import { getAuth } from "firebase/auth";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UserContext';
 
 const Login = () => {
     const [err, setErr] = useState(null);
-    const createUser = useContext(AuthContext);
+    const {signInWEP} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSubmit = event =>{
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        const confirm = event.target.confirm.value;
 
         if(password.length < 6){
             setErr('password should be 6 characters or more.');
             return;
         }
 
-        if(password !== confirm){
-            setErr("Your password didn't match");
-            return;
-        }
-
-        createUser(email, password)
+        signInWEP(email, password)
         .then(result =>{
             console.log(result.user);
             event.target.reset();
+            navigate('/');
         })
         .catch(error => console.error(error));
     }

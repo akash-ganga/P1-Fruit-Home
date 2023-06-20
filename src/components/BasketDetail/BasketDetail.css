@@ -72,10 +72,10 @@
     border-radius: 0px 0px 10px 10px;
     border-bottom: 2px red solid;
     background-color: rgb(184, 144, 144);
-    height: 285px;
+    height: 310px;
     margin-top: 140px;
     position: sticky;
-    top: 140px;
+    top: 170px;
 }
 
 .detail-price-title{

@@ -5,7 +5,7 @@ import { AuthContext } from '../../contexts/UserContext';
 
 const Register = () => {
     const [err, setErr] = useState(null);
-    const createUser = useContext(AuthContext);
+    const {createUser} = useContext(AuthContext);
 
     const handleSubmit = event =>{
         event.preventDefault();

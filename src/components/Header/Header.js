@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faFaceAngry, faGaugeHigh, faKey, faLadderWater } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../images/LOGO.png';
 import './Header.css';
+import { AuthContext } from '../../contexts/UserContext';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
     return (
         <nav className='navbar'>
             <div className='header-1'>
@@ -28,8 +31,13 @@ const Header = () => {
                 <div>
                     <Link to='/basket-detail'>Basket</Link>
                     <Link to='/fruit-detail'>Fruit-Detail</Link>
-                    <Link to='/register'>Register</Link>
-                    <Link to='/login'>Login</Link>
+                    {
+                        user?.uid ? <Link onClick={logOut} to='/login'>Logout</Link> :
+                            <>
+                                <Link to='/register'>Register</Link>
+                                <Link to='/login'>Login</Link>
+                            </>
+                    }
                 </div>
             </div>
         </nav>

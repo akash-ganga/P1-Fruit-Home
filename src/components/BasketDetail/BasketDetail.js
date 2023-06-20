@@ -59,6 +59,7 @@ const BasketDetail = () => {
                     <p>Total Shipping: ${shipping}</p>
                     <p>Tax: ${tax}</p>
                     <h4>Grand Total: ${(price + shipping + tax).toFixed(2)}</h4>
+                    <button>Shipping Proceed</button>
                 </div>
             </div>
         </div>
