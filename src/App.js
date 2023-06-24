@@ -7,6 +7,8 @@ import Sec1 from './components/Sec1/Sec1';
 import Main from './layout/Main';
 import BasketDetail from './components/BasketDetail/BasketDetail';
 import { fruitsBasketLoader } from './loaders/fruitsBasketLoader';
+import Shipping from './components/Shipping/Shipping';
+import PrivateRoute from './components/routes/PrivateRoute';
 
 function App() {
   const router = createBrowserRouter([
@@ -27,6 +29,10 @@ function App() {
         {
           path: 'register',
           element: <Register></Register>
+        },
+        {
+          path: 'shipping',
+          element: <PrivateRoute><Shipping></Shipping></PrivateRoute>
         }
       ]
     }

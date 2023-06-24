@@ -15,7 +15,7 @@ const Header = () => {
                 <div>
                     <Link to='/about'>ABOUT</Link>
                     <Link to='/charts'>CHARTS</Link>
-                    <Link to='/contact'>CONTACT</Link>
+                    <Link to='/shipping'>SHIPPING</Link>
                     <Link to='/beyond'>BEYOND</Link>
                 </div>
                 <div>
@@ -32,7 +32,7 @@ const Header = () => {
                     <Link to='/basket-detail'>Basket</Link>
                     <Link to='/fruit-detail'>Fruit-Detail</Link>
                     {
-                        user?.uid ? <Link onClick={logOut} to='/login'>Logout</Link> :
+                        user?.uid ? <Link onClick={logOut}>Logout</Link> :
                             <>
                                 <Link to='/register'>Register</Link>
                                 <Link to='/login'>Login</Link>

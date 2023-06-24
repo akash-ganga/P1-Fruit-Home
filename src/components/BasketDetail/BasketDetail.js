@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import './BasketDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { removeFromLS } from '../../utilities/sto_to_ls';
 
 const BasketDetail = () => {
-    const { fruits, currentFruits } = useLoaderData();
+    const { currentFruits } = useLoaderData();
+    // fruits,
     const [basFruit, setBasFruit] = useState(currentFruits);
+    const nav = useNavigate();
 
     let price = 0;
     let shipping = 0;
@@ -59,7 +61,7 @@ const BasketDetail = () => {
                     <p>Total Shipping: ${shipping}</p>
                     <p>Tax: ${tax}</p>
                     <h4>Grand Total: ${(price + shipping + tax).toFixed(2)}</h4>
-                    <button>Shipping Proceed</button>
+                    <button onClick={()=>nav('/shipping')}>Shipping Proceed</button>
                 </div>
             </div>
         </div>

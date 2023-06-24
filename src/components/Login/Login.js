@@ -1,14 +1,15 @@
 import React, { useContext, useState } from 'react';
 import './Login.css';
-import app from '../../firebase/firebase.init';
-import { getAuth } from "firebase/auth";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UserContext';
 
 const Login = () => {
     const [err, setErr] = useState(null);
     const {signInWEP} = useContext(AuthContext);
+    // , loading
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = event =>{
         event.preventDefault();
@@ -24,7 +25,7 @@ const Login = () => {
         .then(result =>{
             console.log(result.user);
             event.target.reset();
-            navigate('/');
+            navigate(from, {replace: true});
         })
         .catch(error => console.error(error));
     }
